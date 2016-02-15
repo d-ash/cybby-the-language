@@ -1,0 +1,7 @@
+[:stmts:] for [:array:]
+for [:array:] [:stmts:]
+
+print for $x;
+
+{ s/x/y/g; print } for ${# $var = /^(.)/; lc $1 #}
+

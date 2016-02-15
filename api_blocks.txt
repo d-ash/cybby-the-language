@@ -1,0 +1,43 @@
+my: 'my' name '=' '(' params ')' {
+}
+
+sub: '('
+f1 { block } иначе { block } x y
+
+my x = sub (@b1 'иначе' @b2 a b) {
+}
+
+my sub = 
+
+********************************************************
+
+my x = v
+
+def my $name '=' $value {
+	$names{ $name } = $value;
+}
+
+========================================================
+
+sub x a b c {
+}
+
+def sub $name? @params $block {
+	$subroutines{ $name } = {
+		'params' => @params,
+		'block' => $block;
+	};
+}
+
+========================================================
+
+my A = sub x y {
+}
+
+========================================================
+
+sub upperCase str {
+	return uc(str);
+}
+
+my (upperCase 'a') = 123;
