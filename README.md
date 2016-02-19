@@ -1,7 +1,7 @@
 # Cybby the Language
 
 This is a quick prototype of a toy language interpreter. It consists of a parser and an execution machine.  
-There are no tests, and many ideas had not been implemented (e.g. macros).
+There are no tests, and many ideas haven't been implemented (e.g. macros).
 
 ## Language Syntax
 
@@ -42,4 +42,10 @@ Compare the above code with a Lisp-ish one:
     (turnLeft 10)
     (move)
     (turnRight 5)))
+```
+
+Square brackets are used to identify arrays (quoted lists). Comments are marked with semicolons.
+
+```
+let fooBar [ 1 'yes' 3 'for sure' ]     ; comments
 ```
