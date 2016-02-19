@@ -1,6 +1,4 @@
-var fs = require('fs'),
-	util = require('util'),
-	prg;
+var util = require('util');
 
 var NODE_BLOCK =	0,
 	NODE_EXP =		1,
@@ -25,8 +23,9 @@ var FATAL_DEFAULT =			'No error.',
 	FATAL_LINEEXP_BAD =		'Malformed line expression. ' +
 							'Probably there are unnecessary \')\' or \']\' characters.';
 
+var exports = module.exports = {};
 
-function parse(input, callback) {
+exports.parse = function (input, callback) {
 	var input_len = input.length,
 		cursor = 0,
 		ast,
@@ -530,7 +529,7 @@ function parse(input, callback) {
 	}
 }
 
-function ast_write(ast) {
+exports.ast_write = function (ast) {
 	var indentation = -1;
 
 	function output(s) {
@@ -637,7 +636,7 @@ function ast_write(ast) {
 	output('\n');
 }
 
-function ast_execute(ast) {
+exports.ast_execute = function (ast) {
 	function func_PRINT() {
 		var i,
 			s = '';
@@ -790,16 +789,3 @@ function ast_execute(ast) {
 
 	node_execute(ast);
 }
-
-parse(fs.readFileSync('exec.ctl', 'utf8'), function (err, ast) {
-	if (err) {
-		console.log('Parse error on line ' + err.line + ': ' + err.text);
-		process.exit(1);
-	} else {
-		ast_write(ast);
-		console.log('\nExecuting...\n');
-		ast_execute(ast);
-		console.log('\nFinished\n');
-		process.exit(0);
-	}
-});
