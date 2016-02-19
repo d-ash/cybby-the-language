@@ -5,7 +5,7 @@ There are no tests, and many ideas had not been implemented (e.g. macros).
 
 ## Language Syntax
 
-The language is from a Lisp-family, it's based on S-expressions.  
+This language is from a Lisp-family, it's based on S-expressions.  
 A distinct feature is that, unlike in Lisp, you can also use __whitespace indentation__, similarly to how it's used in Python.
 
 The following two statements are identical:
