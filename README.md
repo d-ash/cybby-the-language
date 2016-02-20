@@ -1,7 +1,7 @@
 # Cybby the Language
 
 This is a quick prototype of a toy language interpreter. It consists of a parser and an execution machine.  
-There are no tests, and many ideas haven't been implemented (e.g. macros).
+There are no tests, and the execution machine has only a small subset of functions (arithmetics and output).
 
 ## Language Syntax
 
