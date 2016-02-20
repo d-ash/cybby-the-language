@@ -19,7 +19,7 @@ funcFoo
     + 1 2
 ```
 
-You can combine these styles together, so that the code looks more readable (less paranthesis).
+You can combine these styles together, so that the code looks more readable (less parenthesis).
 
 ```
 define twice а
