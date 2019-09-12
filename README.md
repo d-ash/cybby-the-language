@@ -1,6 +1,6 @@
 # Cybby the Language
 
-This is a quick prototype of a toy language interpreter, written for Node.js. It consists of a parser and a simple execution machine. There are no tests, and the execution machine has only a small subset of functions (arithmetics and output).
+This was my toy project some time ago. It's a language interpreter written in Node.js. It consists of a parser and a simple execution machine. There are no tests, and the execution machine has only a small subset of functions (arithmetics and output).
 
 ## Language Syntax
 
